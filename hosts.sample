@@ -1,0 +1,2 @@
+[pis]
+pi_ip_address ansible_user=username

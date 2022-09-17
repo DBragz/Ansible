@@ -1,0 +1,18 @@
+---
+vars:
+  hostname: "{{ hostname }}"
+- hosts: all
+  tasks:
+  - name: Changing pi hostname
+    hostname:
+      name: hostname
+  - name: Changing pi password
+    task:
+      user: user=pi update_password=always password=hostname
+  - name: Update
+    apt:
+      update_cache: yes
+  - name: Upgrade
+    apt:
+      name: "*"
+      state: latest

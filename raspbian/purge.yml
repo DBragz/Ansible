@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: Remove libreoffice packages
+    apt:
+      name: libreoffice*
+      state: absent
+      purge: true
+  - name: Remove wolfram-engine
+    apt:
+      name: wolfram-engine
+      state: absent
+      purge: true

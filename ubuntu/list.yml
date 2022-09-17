@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Get packages
+      shell: dpkg-query -f '${binary:Package}\n' -W
+      register: packages
+    - name: Print packages
+      debug:
+        msg: "{{ packages.stdout_lines }}"

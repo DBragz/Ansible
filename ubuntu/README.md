@@ -19,6 +19,14 @@
     ```
 
 3. Note pi IP address.
+  
+4. Copy the hosts sample file to a real one.
+
+    ```shell
+    cp hosts.sample hosts
+    ```
+
+5. Add pi IP address to hosts file.
 
 ### Test from main ansible orchestrator
 

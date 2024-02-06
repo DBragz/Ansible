@@ -16,7 +16,7 @@ Setting up Ansible.
     cp hosts.sample hosts
     ```
 
-2. Add pi ip address to hosts file.
+2. Add pi IP address to hosts file.
 
 3. Generate SSH keys.
 

@@ -4,7 +4,7 @@
 
 * [Ubuntu](https://ubuntu.com/)
 
-### Configuration
+### Configuration on Deployed Machine
 
 1. Boot pi and enable SSH from command line and create pi .ssh folder and authorized_key file.
 
@@ -12,21 +12,23 @@
     mkdir -p /home/username/.ssh/ && touch /home/username/.ssh/authorized_keys
     ```
 
-2. Install python-apt package for managing external packages.
+2. Note pi IP address.
+
+### Configuration for User's Machine using Ansible
+
+1. Install python-apt package for managing external packages.
 
     ```shell
     sudo apt install python3-apt
     ```
 
-3. Note pi IP address.
-  
-4. Copy the hosts sample file to a real one.
+2. Copy the hosts sample file to a real one.
 
     ```shell
     cp hosts.sample hosts
     ```
 
-5. Add pi IP address to hosts file.
+3. Add pi IP address to hosts file.
 
 ### Test from main ansible orchestrator
 

@@ -15,7 +15,7 @@
 2. Install python-apt package for managing external packages.
 
     ```shell
-    sudo apt install python-apt
+    sudo apt install python3-apt
     ```
 
 3. Note pi IP address.

@@ -2,7 +2,7 @@
 
 ## Built With
 
-* [Ubuntu](https://ubuntu.com/).
+* [Ubuntu](https://ubuntu.com/)
 
 ### Configuration
 

@@ -45,19 +45,19 @@
 
 1. Copy the `hosts.sample` file to a file called `hosts`.
 
-  ```shell
-  cp hosts.sample hosts
-  ```
+   ```shell
+   cp hosts.sample hosts
+   ```
 
 2. Update IP address and ansible user name.
 
 3.  Test connection.
 
-  ```shell
-  ansible all -i hosts -m ping -u pi
+   ```shell
+   ansible all -i hosts -m ping -u pi
 
-  pi_ip_address | SUCCESS => {
-    "ansible_facts": {
+   pi_ip_address | SUCCESS => {
+       "ansible_facts": {
       "discovered_interpreter_python": "/usr/bin/python3"
     },
     "changed": false,

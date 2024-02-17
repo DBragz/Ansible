@@ -23,16 +23,23 @@
 
     # Interfacing Options -> SSH -> Yes
 
-    mkdir -p /home/pi/.ssh/ && touch /home/pi/.ssh/authorized_keys
+    mkdir -p ~/.ssh/ && touch ~/.ssh/authorized_keys
     ```
 
-2. Install python-apt package for managing external packages.
+2. Note pi IP address.
 
-    ```shell
-    sudo apt install python-apt
-    ```
+### Authorize Remote Machine
 
-3. Note pi IP address.
+1. Generate an SSH key.
+
+2. Push generated key to pi.
+   
+   ```shell
+   cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> ~/.ssh/authorized_keys'
+
+   # You will be then prompted to provide a password
+   user@hostname's password:
+   ```
 
 ### Test from main ansible orchestrator
 

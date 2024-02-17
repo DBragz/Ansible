@@ -33,7 +33,7 @@
 1. Generate an SSH key.
 
 2. Push generated key to pi.
-   
+
    ```shell
    cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> ~/.ssh/authorized_keys'
 
@@ -51,7 +51,7 @@
 
 2. Update IP address and ansible user name.
 
-3.  Test connection.
+3. Test connection.
 
    ```shell
    ansible all -i hosts -m ping -u pi

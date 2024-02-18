@@ -62,9 +62,8 @@
     },
     "changed": false,
     "ping": "pong"
-  }
-
-  ```
+   }
+   ```
 
 ### Execute
 

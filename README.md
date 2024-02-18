@@ -56,16 +56,6 @@ Setting up Ansible.
   ansible all -i hosts -m ping -u username
   ```
 
-### Execute
-
-  ```shell
-  # Purge LibreOffice and Wolfram Engine.
-  ansible-playbook -i hosts -u username purge.yml
-
-  # Autoremove and autoclean
-  ansible-playbook -i hosts -u username clean.yml
-  ```
-
 ## Authors
 
 * [Daniel Ribeirinha-Braga](https://github.com/DBragz)

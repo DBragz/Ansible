@@ -38,13 +38,22 @@ Setting up Ansible.
     docker run --rm -it -v your_directory_location:/ansible willhallonline/ansible:latest /bin/sh
     ```
 
-2. Generate SSH keys.
+2. Copy the hosts sample file to a real one.
+
+    ```shell
+    cp hosts.sample hosts
+    ```
+
+3. Add pi IP address to hosts file.
+
+
+4. Generate SSH keys.
 
     ```shell
     ssh-keygen -t rsa -b 4096 -C username@email.com
     ```
 
-3. Send SSH keys to server.
+5. Send SSH keys to server.
 
     ```shell
     cat ~/.ssh/id_rsa.pub | ssh username@server "cat >> ~/.ssh/authorized_keys"

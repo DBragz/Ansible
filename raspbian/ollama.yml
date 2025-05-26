@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install Ollama
+    ansible.builtin.shell: >
+      curl -fsSL https://ollama.com/install.sh | sh
+    args:
+      executable: /bin/bash
+    register: ollama_output
+
+  - name: Verify installation
+    ansible.builtin.command: ollama --version
+    register: ollama_version
+    changed_when: false
+
+  - name: Show Ollama version
+    ansible.builtin.debug:
+      msg: "Installed Ollama version: {{ ollama_version.stdout }}"
+
+

@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  vars_prompt:
+    - name: ollama_model
+      prompt: "Enter the Ollama model name you want to pull (e.g., llama3, mistral, gemma, phi)"
+      private: no
+
+  tasks:
+    - name: Pull the specified Ollama model
+      ansible.builtin.command:
+        cmd: "ollama pull {{ ollama_model }}"
+      register: ollama_output
+      changed_when: "'pulling' in ollama_output.stdout"
+
+    - name: Display confirmation
+      ansible.builtin.debug:
+        msg: "Successfully pulled model: {{ ollama_model }}"
+
+

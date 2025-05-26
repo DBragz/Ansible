@@ -1,0 +1,8 @@
+---
+- name: Restart Raspberry Pis
+  hosts: all
+  become: yes
+  tasks:
+    - name: Reboot the system
+      ansible.builtin.reboot:
+        reboot_timeout: 120  # Wait up to 2 minutes for the reboot to complete

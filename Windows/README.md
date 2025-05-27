@@ -33,6 +33,17 @@
     pi_ip_address ansible_user=Administrator ansible_password=NewPassword ansible_connection=winrm ansible_winrm_transport=ntlm ansible_port=5985
     ```
 
+### Test
+
+```bash
+# Run Ping Module
+ansible windows -i hosts.ini -m win_ping
+
+# Run PowerShell Commands
+ansible windows -m ansible.windows.win_shell -a "Get-ComputerInfo"
+```
+
+
 ## Authors
 
 * [Daniel Ribeirinha-Braga](https://github.com/DBragz)

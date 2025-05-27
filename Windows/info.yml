@@ -1,0 +1,8 @@
+- name: Get Windows product details
+  hosts: windows
+  tasks:
+    - name: Retrieve product facts
+      community.windows.win_product_facts:
+    - name: Display Windows edition
+      debug:
+        var: ansible_os_license_edition
